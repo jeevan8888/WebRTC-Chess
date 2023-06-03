@@ -1,0 +1,401 @@
+.App {
+  overflow-x: hidden;
+}
+
+.img {
+  background-color: black;
+  width: 100vw;
+  text-align: center;
+}
+
+.img img {
+  width: 90px;
+  /* height: 50px; */
+  object-fit: cover;
+  margin: 2px;
+  border: none;
+}
+
+.constainer {
+  display: flex;
+  gap: 10px;
+  background: rgb(22, 21, 21);
+  margin: 30px;
+}
+
+.clipboard {
+  height: 50px;
+  width: 100vw;
+  background: #434242;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clipboard .div {
+  margin: auto;
+  display: flex;
+}
+
+.clipboard span {
+  background-color: rgb(7, 3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  font-weight: 300;
+  padding: 5px;
+  position: relative;
+  bottom: 2px;
+  height: 40px;
+}
+.clipboard button {
+  background-color: rgba(195, 183, 183, 0.8);
+  font-weight: 500;
+  transition: all 0.1s ease-in-out;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.clipboard button:hover {
+  background-color: rgba(195, 183, 183, 1);
+}
+
+.left {
+  position: relative;
+  margin-left: 5rem;
+}
+
+.left .game_over {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(237, 243, 248, 0.4);
+  z-index: 100000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.incenter {
+  background-color: rgba(193, 12, 39, 0.5);
+  width: 50%;
+  text-align: center;
+  border-radius: 3px;
+}
+
+button {
+  margin: 6px;
+  width: 45%;
+  height: 40px;
+  border-radius: 3px;
+  outline: none;
+  background-color: rgba(244, 240, 240, 0.7);
+  font-size: 14px;
+  border: 1px solid black;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgba(85, 82, 82, 0.7);
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  height: 600px;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+
+  /* grid-template-rows: 300px 300px; */
+}
+
+video {
+  height: 550px;
+  width: 100%;
+}
+
+@media (max-width: 1224px) {
+  video {
+    height: 250px;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 250px;
+  }
+}
+@media (max-width: 1156px) {
+  video {
+    height: 200px;
+  }
+  .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 200px;
+  }
+}
+@media (max-width: 650px) {
+  .constainer {
+    flex-direction: column;
+  }
+  .wrapper {
+    display: flex;
+  }
+  .wrapper .persons {
+    width: 50%;
+  }
+  .left {
+    margin: auto;
+  }
+}
+
+.homePage {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+.homePage img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+.mainLabel {
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.box {
+  position: absolute;
+  border-color: #424b5b;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  background: white;
+  border-radius: 5px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  gap: 5px;
+  background: rgba(1, 1, 1, 0.5);
+  background: linear-gradient(
+    90deg,
+    rgba(1, 1, 1, 0.7) 0%,
+    rgba(1, 1, 1, 0.5) 59.76%,
+    rgba(1, 1, 1, 0.5) 100%
+  );
+  -webkit-box-shadow: 2px 0px 130px -11px rgba(81, 102, 179, 1);
+  -moz-box-shadow: 2px 0px 130px -11px rgba(81, 102, 179, 1);
+  box-shadow: 2px 0px 130px -11px rgba(81, 102, 179, 1);
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-box-shadow: 2px 0px 110px -42px rgba(81, 102, 179, 1);
+    -moz-box-shadow: 2px 0px 110px -42px rgba(81, 102, 179, 1);
+    box-shadow: 2px 0px 110px -42px rgba(81, 102, 179, 1);
+  }
+  20% {
+    -webkit-box-shadow: 33px -11px 152px -27px rgba(81, 102, 179, 1);
+    -moz-box-shadow: 33px -11px 152px -27px rgba(81, 102, 179, 1);
+    box-shadow: 33px -11px 152px -27px rgba(81, 102, 179, 1);
+  }
+  30% {
+    -webkit-box-shadow: -29px -29px 152px -11px rgba(81, 102, 179, 1);
+    -moz-box-shadow: -29px -29px 152px -11px rgba(81, 102, 179, 1);
+    box-shadow: -29px -29px 152px -11px rgba(81, 102, 179, 1);
+  }
+  40% {
+    -webkit-box-shadow: -14px -29px 75px -11px rgba(81, 102, 179, 1);
+    -moz-box-shadow: -14px -29px 75px -11px rgba(81, 102, 179, 1);
+    box-shadow: -14px -29px 75px -11px rgba(81, 102, 179, 1);
+  }
+  50% {
+    -webkit-box-shadow: 12px -36px 96px 0px rgba(81, 102, 179, 1);
+    -moz-box-shadow: 12px -36px 96px 0px rgba(81, 102, 179, 1);
+    box-shadow: 12px -36px 96px 0px rgba(81, 102, 179, 1);
+  }
+  60% {
+    -webkit-box-shadow: -16px -36px 117px -8px rgba(81, 102, 179, 1);
+    -moz-box-shadow: -16px -36px 117px -8px rgba(81, 102, 179, 1);
+    box-shadow: -16px -36px 117px -8px rgba(81, 102, 179, 1);
+  }
+  70% {
+    -webkit-box-shadow: -16px 5px 117px -8px rgba(81, 102, 179, 1);
+    -moz-box-shadow: -16px 5px 117px -8px rgba(81, 102, 179, 1);
+    box-shadow: -16px 5px 117px -8px rgba(81, 102, 179, 1);
+  }
+  80% {
+    -webkit-box-shadow: 21px -14px 99px -8px rgba(81, 102, 179, 1);
+    -moz-box-shadow: 21px -14px 99px -8px rgba(81, 102, 179, 1);
+    box-shadow: 21px -14px 99px -8px rgba(81, 102, 179, 1);
+  }
+  90% {
+    -webkit-box-shadow: 21px -25px 145px -8px rgba(81, 102, 179, 1);
+    -moz-box-shadow: 21px -25px 145px -8px rgba(81, 102, 179, 1);
+    box-shadow: 21px -25px 145px -8px rgba(81, 102, 179, 1);
+  }
+  100% {
+    -webkit-box-shadow: 2px 0px 110px -42px rgba(81, 102, 179, 1);
+    -moz-box-shadow: 2px 0px 110px -42px rgba(81, 102, 179, 1);
+    box-shadow: 2px 0px 110px -42px rgba(81, 102, 179, 1);
+  }
+}
+
+.box .inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+.box .inputGroup .inputBox {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  margin-bottom: 14px;
+  background: rgb(229, 224, 224);
+  font-size: 16px;
+  font-weight: bold;
+}
+.box .inputGroup button {
+  margin: auto;
+  width: 100%;
+  border: none;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
+  color: #f6f6f6;
+  background: rgb(14, 118, 140);
+  background: linear-gradient(
+    90deg,
+    rgba(14, 118, 140, 0.6671043417366946) 0%,
+    rgba(22, 54, 61, 0.8547794117647058) 0%,
+    rgba(20, 66, 76, 1) 0%,
+    rgba(15, 101, 119, 1) 100%,
+    rgba(0, 209, 255, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.box .inputGroup button:hover {
+  box-shadow: 0 0 10px rgb(48, 6, 255);
+}
+
+.inputBox::placeholder {
+  font-size: small;
+  color: black;
+}
+
+.mainLabel {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.createInfo {
+  margin: 0 auto;
+  margin-top: 10px;
+  font-weight: 200;
+}
+.createInfo a {
+  color: rgba(255, 0, 149, 0.9);
+  font-weight: 600;
+  text-decoration: none;
+}
+.createInfo a:hover {
+  color: rgba(255, 0, 149);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .clipboard {
+    margin: auto;
+    font-size: 10px;
+  }
+  .clipboard button {
+    font-size: 10px;
+  }
+  .img img {
+    width: 50px;
+  }
+}
+
+.status {
+  margin: auto;
+  color: rgb(168, 3, 77);
+  font-weight: 600;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.resign {
+  background-color: rgba(205, 1, 1, 0.8) !important;
+  color: rgb(0, 0, 0);
+}
+.resign:hover {
+  background-color: rgb(217, 0, 0, 0.9) !important;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .box {
+    padding: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .box {
+    padding: 38px;
+  }
+}
+
+.answercall {
+  padding: 8px;
+  background: red;
+  text-align: center;
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  transition: all .2s;
+}
+.answercall svg{
+  position: relative;
+  top: 4px;
+  fill: black;
+}
+.answercall:hover {
+  background-color: rgba(205, 1, 1, 0.8);
+  cursor: pointer;
+}
+.acceptcall {
+  padding: 8px;
+  background: rgb(0, 191, 0);
+  text-align: center;
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  transition: all .2s;
+}
+.acceptcall svg {
+  position: relative;
+  top: 4px;
+  fill: black;
+}
+.acceptcall:hover {
+  background-color: rgba(29, 159, 0, 0.8);
+  cursor: pointer;
+}
